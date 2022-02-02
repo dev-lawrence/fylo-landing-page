@@ -5,4 +5,406 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a,
+span {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.3;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #edf2f4;
+}
+
+body {
+  text-size-adjust: 100%;
+  line-height: 1.6;
+  background-color: #181f2a;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+.container {
+  padding: 0 1rem;
+}
+
+.btn {
+  position: relative;
+  color: white;
+  font-size: "Raleway", sans-serif;
+  background: linear-gradient(90deg, #65e2d9, #339ecc);
+  padding: 0.7rem 3rem;
+  border-radius: 4rem;
+  z-index: 1;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4rem;
+  z-index: -1;
+  background-color: transparent;
+  opacity: 0;
+  transition: background-color 0.2s ease-in, opacity 0.3s ease-in-out;
+}
+
+.btn:hover::after {
+  background-color: white;
+  opacity: 0.4;
+}
+
+.header {
+  background-color: #1c2431;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.header__content .logo {
+  width: 90px;
+  margin-top: 0.4rem;
+}
+
+.header .nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.header .nav__link {
+  position: relative;
+  color: #cad3dc;
+  margin-left: 1.2rem;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.4px;
+  font-size: 0.9rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.header .nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.1rem;
+  width: 100%;
+  height: 1.2px;
+  transform: scale(0);
+  transform-origin: right;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header .nav__link:hover::after {
+  transform-origin: left;
+  transform: scale(1);
+}
+
+.header .nav__link:hover {
+  color: white;
+}
+
+.hero {
+  padding-top: 2.5rem;
+  position: relative;
+}
+
+.hero__container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero__bg {
+  background: #1c2431 url(../../images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 14rem;
+  z-index: -1;
+}
+
+.hero__text {
+  text-align: center;
+  padding-top: 4rem;
+  position: relative;
+}
+
+.hero__text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero__text p {
+  margin-bottom: 1.5rem;
+}
+
+.feature {
+  margin-top: 8.313rem;
+}
+
+.feature img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0 auto 2rem;
+}
+
+.feature__cards {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.feature__card {
+  text-align: center;
+}
+
+.feature__card h3 {
+  margin-bottom: 0.7rem;
+}
+
+.feature__card p {
+  font-size: 0.9rem;
+}
+
+.feature__card:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.productive {
+  margin-top: 8.313rem;
+}
+
+.productive__text {
+  margin-top: 3.875rem;
+}
+
+.productive__text h2 {
+  margin-bottom: 0.7rem;
+}
+
+.productive__text p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.productive__btn {
+  color: #65e2d9;
+  position: relative;
+}
+
+.productive__btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 100%;
+  height: 1.5px;
+  transform: scale(1);
+  transform-origin: left;
+  background-color: #65e2d9;
+  transition: transform 0.3s ease-in-out;
+}
+
+.productive__btn span {
+  font-size: 0.9rem;
+  margin-right: 0.3rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.productive__btn i {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #65e2d9;
+  color: #000;
+  font-size: 0.6rem;
+  text-align: center;
+  line-height: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.productive__btn:hover::after {
+  transform-origin: right;
+  transform: scale(0);
+}
+
+.productive__btn:hover i {
+  background-color: white;
+}
+
+.productive__btn:hover span {
+  color: white;
+}
+
+.team {
+  margin-top: 8.313rem;
+}
+
+.team img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team__cards {
+  position: relative;
+}
+
+.team__cards::before {
+  content: '';
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  background: url(../../images/bg-quotes.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.team__card {
+  background-color: #202a3c;
+  z-index: 1;
+  padding: 2rem 2rem 1.5rem;
+  border-radius: 0.4rem;
+}
+
+.team__card h4 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.team__card p {
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+.team__card-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.team__card-profile span {
+  color: #edf2f4;
+  font-size: 0.8rem;
+}
+
+.team__card-profile--info {
+  margin-left: 0.7rem;
+}
+
+.team__card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.sign-up {
+  margin-top: 8.313rem;
+  position: relative;
+}
+
+.sign-up__container {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  width: 93%;
+  max-width: 768px;
+  transform: translateX(-50%);
+}
+
+.sign-up__content {
+  background-color: #1c2431;
+  text-align: center;
+  border-radius: 0.4rem;
+  padding: 2rem;
+}
+
+.sign-up__content h2 {
+  margin-bottom: 1rem;
+}
+
+.sign-up__content p {
+  margin-bottom: 2rem;
+}
+
+.sign-up .form .d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sign-up .form .mail {
+  width: 100%;
+}
+
+.sign-up .form input[type='email'],
+.sign-up .form button {
+  width: 100%;
+  border: none;
+  outline: nones;
+  border-radius: 10rem;
+}
+
+.sign-up .form input[type='email'] {
+  font-size: 0.9rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sign-up .form-btn {
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 19rem;
+  background-color: #0b1523;
+}
+
+.footer img {
+  width: 20px;
+  height: 20px;
 }

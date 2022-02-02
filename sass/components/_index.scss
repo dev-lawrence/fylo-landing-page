@@ -1,0 +1,323 @@
+// HEADER SECTION
+.header {
+  background-color: $darkBlueIntro;
+
+  &__content {
+    @include flex(center, space-between);
+    padding: 1rem 0;
+
+    .logo {
+      width: 90px;
+      margin-top: 0.4rem;
+    }
+  }
+
+  .nav {
+    &__menu {
+      @include flex(center, flex-end);
+      flex-wrap: wrap;
+    }
+
+    &__link {
+      position: relative;
+      color: #cad3dc;
+      margin-left: 1.2rem;
+      font-family: $secFont;
+      letter-spacing: 0.4px;
+      font-size: $fs-small;
+      transition: color 0.3s ease-in-out;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0.1rem;
+        width: 100%;
+        height: 1.2px;
+        transform: scale(0);
+        transform-origin: right;
+        background-color: $white;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        transform-origin: left;
+        transform: scale(1);
+      }
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+// HERO SECTION
+.hero {
+  padding-top: 2.5rem;
+  position: relative;
+
+  &__container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__bg {
+    background: $darkBlueIntro url(../../images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 14rem;
+    z-index: -1;
+  }
+
+  &__text {
+    text-align: center;
+    padding-top: 4rem;
+    position: relative;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// FEATURE SECTION
+.feature {
+  margin-top: 8.313rem;
+
+  img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto 2rem;
+  }
+
+  &__cards {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__card {
+    text-align: center;
+
+    h3 {
+      margin-bottom: 0.7rem;
+    }
+
+    p {
+      font-size: $fs-small;
+    }
+  }
+
+  &__card:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+
+// PRODUCTIVE SECTION
+.productive {
+  margin-top: 8.313rem;
+
+  &__text {
+    margin-top: 3.875rem;
+
+    h2 {
+      margin-bottom: 0.7rem;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__btn {
+    color: $cyanCta;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.3rem;
+      width: 100%;
+      height: 1.5px;
+      transform: scale(1);
+      transform-origin: left;
+      background-color: $cyanCta;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    span {
+      font-size: $fs-small;
+      margin-right: 0.3rem;
+      transition: color 0.3s ease-in-out;
+    }
+
+    i {
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background-color: $cyanCta;
+      color: #000;
+      font-size: 0.6rem;
+      text-align: center;
+      line-height: 16px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      transform-origin: right;
+      transform: scale(0);
+    }
+
+    &:hover i {
+      background-color: $white;
+    }
+
+    &:hover span {
+      color: $white;
+    }
+  }
+}
+
+// TEAM SECTION
+.team {
+  margin-top: 8.313rem;
+
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__cards {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      background: url(../../images/bg-quotes.png);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__card {
+    background-color: $darkBluetesti;
+    z-index: 1;
+    padding: 2rem 2rem 1.5rem;
+    border-radius: 0.4rem;
+
+    h4 {
+      font-family: $pryFont;
+    }
+
+    p {
+      line-height: 2;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__card-profile {
+    @include flex(center, flex-start);
+
+    span {
+      color: #edf2f4;
+      font-size: 0.8rem;
+    }
+
+    &--info {
+      margin-left: 0.7rem;
+    }
+  }
+
+  &__card:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+// SIGN UP SECTION
+.sign-up {
+  margin-top: 8.313rem;
+  position: relative;
+
+  &__container {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    width: 93%;
+    max-width: 768px;
+    transform: translateX(-50%);
+  }
+
+  &__content {
+    background-color: $darkBlueIntro;
+    text-align: center;
+    border-radius: 0.4rem;
+    padding: 2rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .form {
+    .d-flex {
+      @include flex(center, center);
+      flex-wrap: wrap;
+    }
+
+    .mail {
+      width: 100%;
+    }
+
+    input[type='email'],
+    button {
+      width: 100%;
+      border: none;
+      outline: nones;
+      border-radius: 10rem;
+    }
+
+    input[type='email'] {
+      font-size: 0.9rem;
+      padding: 0.7rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &-btn {
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  margin-top: 19rem;
+  background-color: $darkBluefooter;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// add top arrow btn

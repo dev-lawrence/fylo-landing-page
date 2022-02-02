@@ -39,6 +39,7 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
+      <div class="hero__bg"></div>
       <div class="hero__container">
         <div class="hero__content">
           <div class="hero__img">
@@ -169,7 +170,7 @@
             </p>
             <a href="#" class="productive__btn">
               <span> See how Fylo works</span>
-              <img src="./images/icon-arrow.svg" alt="icon-arrow" />
+              <i class="fas fa-arrow-right"></i>
             </a>
           </div>
         </div>
@@ -243,14 +244,22 @@
 
           <form netlify class="form">
             <div class="d-flex">
-              <input type="email" placeholder="email@example.com" />
-              <button type="submit">Get Started For Free</button>
+              <input
+                class="email"
+                type="email"
+                placeholder="email@example.com"
+              />
+              <p class="error-msg"></p>
+              <button class="btn form-btn" type="submit">
+                Get Started For Free
+              </button>
             </div>
           </form>
         </div>
       </div>
     </section>
 
+    <!-- FOOTER SECTION -->
     <footer class="footer">
       <div class="container">
         <div class="footer__content">
