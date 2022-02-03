@@ -15,7 +15,8 @@ select {
   font: inherit;
 }
 
-input:focus {
+input:focus,
+button:focus {
   outline: none;
 }
 
@@ -379,9 +380,10 @@ body {
 
 .sign-up .form .mail {
   width: 100%;
+  position: relative;
 }
 
-.sign-up .form input[type='email'],
+.sign-up .form input[type='text'],
 .sign-up .form button {
   width: 100%;
   border: none;
@@ -389,7 +391,7 @@ body {
   border-radius: 10rem;
 }
 
-.sign-up .form input[type='email'] {
+.sign-up .form input[type='text'] {
   font-size: 0.9rem;
   padding: 0.7rem 1rem;
   margin-bottom: 1.5rem;
@@ -399,12 +401,134 @@ body {
   cursor: pointer;
 }
 
+.sign-up .error-msg {
+  position: absolute;
+  top: 3rem;
+  left: 1rem;
+  font-size: 0.8rem;
+}
+
+.sign-up .error-msg.clr {
+  color: #ff4242;
+}
+
 .footer {
   margin-top: 19rem;
   background-color: #0b1523;
 }
 
-.footer img {
+.footer .location,
+.footer .phone,
+.footer .mail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer .location img,
+.footer .phone img,
+.footer .mail img {
   width: 20px;
   height: 20px;
+  object-fit: contain;
+  margin-right: 0.7rem;
+}
+
+.footer .location,
+.footer .phone {
+  margin-bottom: 1rem;
+}
+
+.footer__content {
+  padding-top: 15.75rem;
+}
+
+.footer__content .logo {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+.footer__content .location img {
+  align-self: flex-start;
+  margin-top: 0.3rem;
+}
+
+.footer__content .mail a {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.footer .col-3 {
+  margin-top: 5.313rem;
+}
+
+.footer .col-4 {
+  margin-top: 3.2rem;
+}
+
+.footer__links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer__links a {
+  color: #cad3dc;
+  font-size: 0.9rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__links a:hover {
+  color: white;
+}
+
+.footer .social-links {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.footer .social-links a {
+  height: 32px;
+  width: 32px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.8rem;
+  line-height: 32px;
+  margin-left: 0.5rem;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.footer .social-links a:hover {
+  color: #65e2d9;
+  border-color: #65e2d9;
+}
+
+.footer .up-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  color: white;
+  background-color: #339ecc;
+  line-height: 32px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.up-btn.toTopBtn {
+  animation-name: toTop;
+  animation-duration: 0.6s;
+  opacity: 1;
+}
+
+@keyframes toTop {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }

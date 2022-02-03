@@ -244,12 +244,14 @@
 
           <form netlify class="form">
             <div class="d-flex">
-              <input
-                class="email"
-                type="email"
-                placeholder="email@example.com"
-              />
-              <p class="error-msg"></p>
+              <div class="mail">
+                <input
+                  class="email"
+                  type="text"
+                  placeholder="email@example.com"
+                />
+                <p class="error-msg"></p>
+              </div>
               <button class="btn form-btn" type="submit">
                 Get Started For Free
               </button>
@@ -265,8 +267,13 @@
         <div class="footer__content">
           <div class="grid">
             <div class="col-1">
-              <img src="./images/logo.svg" aria-label="Fylo" alt="Fylo" />
-              <div class="location d-flex">
+              <img
+                class="logo"
+                src="./images/logo.svg"
+                aria-label="Fylo"
+                alt="Fylo"
+              />
+              <div class="location">
                 <img
                   src="./images/icon-location.svg"
                   aria-label="location"
@@ -280,7 +287,7 @@
             </div>
 
             <div class="col-2">
-              <div class="phone d-flex">
+              <div class="phone">
                 <img
                   src="./images/icon-phone.svg"
                   aria-label="phone"
@@ -289,7 +296,7 @@
                 <p>+1-543-123-4567</p>
               </div>
 
-              <div class="mail d-flex">
+              <div class="mail">
                 <img
                   src="./images/icon-email.svg"
                   aria-label="email"
@@ -334,12 +341,10 @@
           </div>
         </div>
       </div>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Lawrence Sticks</a>.
-      </p>
+      <!-- Back to top button -->
+      <div class="up-btn">
+        <i class="fas fa-arrow-up"></i>
+      </div>
     </footer>
     <script src="./index.js"></script>
   </body>

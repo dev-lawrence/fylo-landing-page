@@ -1,0 +1,15 @@
+.up-btn.toTopBtn {
+  animation-name: toTop;
+  animation-duration: 0.6s;
+  opacity: 1;
+}
+
+@keyframes toTop {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

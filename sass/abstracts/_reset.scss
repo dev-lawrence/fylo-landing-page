@@ -14,7 +14,8 @@ select {
   font: inherit;
 }
 
-input:focus {
+input:focus,
+button:focus {
   outline: none;
 }
 
