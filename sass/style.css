@@ -532,3 +532,14 @@ body {
     transform: translateY(0);
   }
 }
+
+.fade-in {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.fade-in.appear {
+  transform: translateY(0);
+  opacity: 1;
+}
