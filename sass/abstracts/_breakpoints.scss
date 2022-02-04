@@ -1,0 +1,91 @@
+//MOBILE SCREENS
+@media (min-width: 576px) {
+  .container {
+    width: 576px;
+    margin: 0 auto;
+  }
+}
+
+// TABLET SCREEN
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  // HEADER SECTION
+  .header {
+    .nav {
+      &__link {
+        margin-left: 3rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // HERO SECTION
+  .hero {
+    padding-top: 4rem;
+
+    &__bg {
+      background: $darkBlueIntro url(../../images/bg-curvy-desktop.svg);
+      @include bg();
+      bottom: 0;
+    }
+
+    &__text {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  // FEATURE AND PRODUCTIVE SECTION
+  .feature,
+  .productive {
+    .grid {
+      @include grid(repeat(2, 1fr), 2rem);
+    }
+  }
+
+  // TEAM SECTION
+  .team {
+    .grid {
+      @include grid(repeat(2, 1fr), 2rem);
+    }
+
+    &__card:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// FOOTER SECTION
+.footer {
+  .grid {
+    @include grid(repeat(2, 1fr), 2rem);
+  }
+
+  .col-3,
+  .col-4 {
+    margin-top: 0;
+  }
+
+  .col-2,
+  .col-4 {
+    align-self: center;
+    justify-self: flex-end;
+  }
+
+  .col-4 {
+    margin-right: 5rem;
+  }
+
+  .col-5 {
+    position: relative;
+  }
+
+  .social-links {
+    padding-top: 0;
+    justify-self: end;
+  }
+}

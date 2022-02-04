@@ -4,6 +4,20 @@
   justify-content: $justify;
 }
 
+@mixin grid($gtc, $gap) {
+  display: grid;
+  grid-template-columns: $gtc;
+  gap: $gap;
+}
+
+@mixin bg {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+
 .btn {
   position: relative;
   color: $white;

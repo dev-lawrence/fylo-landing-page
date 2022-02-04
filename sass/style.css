@@ -151,7 +151,7 @@ body {
 
 .hero__container {
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -195,7 +195,7 @@ body {
 
 .feature__cards {
   width: 90%;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -542,4 +542,80 @@ body {
 .fade-in.appear {
   transform: translateY(0);
   opacity: 1;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 576px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  .header .nav__link {
+    margin-left: 3rem;
+    font-size: 1rem;
+  }
+  .hero {
+    padding-top: 4rem;
+  }
+  .hero__bg {
+    background: #1c2431 url(../../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+  }
+  .hero__text h1 {
+    font-size: 2.5rem;
+  }
+  .feature .grid,
+  .productive .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .team .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .team__card:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.footer .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.footer .col-3,
+.footer .col-4 {
+  margin-top: 0;
+}
+
+.footer .col-2,
+.footer .col-4 {
+  align-self: center;
+  justify-self: flex-end;
+}
+
+.footer .col-4 {
+  margin-right: 5rem;
+}
+
+.footer .col-5 {
+  position: relative;
+}
+
+.footer .social-links {
+  padding-top: 0;
+  justify-self: end;
 }

@@ -59,17 +59,13 @@
 
   &__container {
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
   }
 
   &__bg {
     background: $darkBlueIntro url(../../images/bg-curvy-mobile.svg);
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: contain;
-    height: 100%;
-    width: 100%;
+    @include bg();
     position: absolute;
     bottom: 14rem;
     z-index: -1;
@@ -103,7 +99,7 @@
 
   &__cards {
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
   }
 
@@ -322,6 +318,7 @@
   }
 }
 
+// FOOTER SECTION
 .footer {
   margin-top: 19rem;
   background-color: $darkBluefooter;
