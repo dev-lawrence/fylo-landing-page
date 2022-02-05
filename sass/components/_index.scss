@@ -65,7 +65,7 @@
 
   &__bg {
     background: $darkBlueIntro url(../../images/bg-curvy-mobile.svg);
-    @include bg();
+    @include bg(contain);
     position: absolute;
     bottom: 14rem;
     z-index: -1;
@@ -99,7 +99,7 @@
 
   &__cards {
     width: 90%;
-    max-width: 600px;
+    max-width: 768px;
     margin: 0 auto;
   }
 
@@ -257,7 +257,7 @@
     top: 2rem;
     left: 50%;
     width: 93%;
-    max-width: 768px;
+    max-width: 700px;
     transform: translateX(-50%);
   }
 
@@ -265,7 +265,7 @@
     background-color: $darkBlueIntro;
     text-align: center;
     border-radius: 0.4rem;
-    padding: 2rem;
+    padding: 2.3rem 2rem;
 
     h2 {
       margin-bottom: 1rem;

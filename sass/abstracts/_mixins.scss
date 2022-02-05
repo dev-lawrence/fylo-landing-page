@@ -10,10 +10,10 @@
   gap: $gap;
 }
 
-@mixin bg {
+@mixin bg($bg-size) {
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: contain;
+  background-size: $bg-size;
   height: 100%;
   width: 100%;
 }

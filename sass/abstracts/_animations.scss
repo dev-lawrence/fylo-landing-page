@@ -1,3 +1,35 @@
+// HERO FADE IN
+.hero__container {
+  animation-name: hero;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes hero {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// FADE IN CARDS
+.fade-in {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.fade-in.appear {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// UP BUTTON
 .up-btn.toTopBtn {
   animation-name: toTop;
   animation-duration: 0.6s;
@@ -12,16 +44,4 @@
   to {
     transform: translateY(0);
   }
-}
-
-// FADE IN CARDS
-.fade-in {
-  transform: translateY(40px);
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out, transform 0.7s ease-in-out;
-}
-
-.fade-in.appear {
-  transform: translateY(0);
-  opacity: 1;
 }
