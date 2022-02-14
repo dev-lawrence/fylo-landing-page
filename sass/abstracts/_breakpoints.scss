@@ -144,11 +144,11 @@
     width: 1200px;
   }
 
-  // .hero__container {
-  //   animation-name: hero;
-  //   animation-duration: 0.8s;
-  //   animation-timing-function: ease-in-out;
-  // }
+  .hero__container {
+    animation-name: hero;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+  }
 
   @keyframes hero {
     from {
