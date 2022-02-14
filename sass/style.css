@@ -670,6 +670,16 @@ body {
   .container {
     width: 1200px;
   }
+  @keyframes hero {
+    from {
+      transform: translateY(-70px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   .feature .grid,
   .productive .grid {
     display: grid;
