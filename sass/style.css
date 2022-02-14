@@ -520,7 +520,7 @@ body {
 
 .hero__container {
   animation-name: hero;
-  animation-duration: 0.3s;
+  animation-duration: 0.4s;
   animation-timing-function: ease-in-out;
 }
 
