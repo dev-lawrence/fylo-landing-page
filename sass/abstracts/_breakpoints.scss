@@ -31,11 +31,11 @@
   .hero {
     padding-top: 4rem;
 
-    &__bg {
-      background: $darkBlueIntro url(../../images/bg-curvy-desktop.svg);
-      @include bg(100% 279px);
-      bottom: 0;
-    }
+    // &__bg {
+    //   background: $darkBlueIntro url(../../images/bg-curvy-desktop.svg);
+    //   @include bg(100% 279px);
+    //   bottom: 0;
+    // }
 
     &__text {
       h1 {
@@ -143,24 +143,6 @@
   .container {
     width: 1200px;
   }
-
-  // .hero__container {
-  //   animation-name: hero;
-  //   animation-duration: 0.8s;
-  //   animation-timing-function: ease-in-out;
-  // }
-
-  // @keyframes hero {
-  //   from {
-  //     transform: translateY(-40px);
-  //     opacity: 0;
-  //   }
-
-  //   to {
-  //     transform: translateY(0);
-  //     opacity: 1;
-  //   }
-  // }
 
   .feature,
   .productive {

@@ -518,6 +518,23 @@ body {
   transition: opacity 0.6s ease-in-out;
 }
 
+.hero__container {
+  animation-name: hero;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes hero {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .fade-in {
   transform: translateY(40px);
   opacity: 0;
@@ -565,15 +582,6 @@ body {
   }
   .hero {
     padding-top: 4rem;
-  }
-  .hero__bg {
-    background: #1c2431 url(../../images/bg-curvy-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: 100% 279px;
-    height: 100%;
-    width: 100%;
-    bottom: 0;
   }
   .hero__text h1 {
     font-size: 2.5rem;
