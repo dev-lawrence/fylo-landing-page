@@ -1,21 +1,21 @@
 // HERO FADE IN
-.hero__container {
-  animation-name: hero;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-in-out;
-}
+// .hero__container {
+//   animation-name: hero;
+//   animation-duration: 0.8s;
+//   animation-timing-function: ease-in-out;
+// }
 
-@keyframes hero {
-  from {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
+// @keyframes hero {
+//   from {
+//     transform: translateY(-30px);
+//     opacity: 0;
+//   }
 
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
 
 // FADE IN CARDS
 .fade-in {
